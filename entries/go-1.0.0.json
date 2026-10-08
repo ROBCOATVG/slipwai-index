@@ -2,7 +2,7 @@
   "name": "go",
   "version": "1.0.0",
   "file": "https://github.com/ROBCOATVG/slipwai-language-go/releases/download/v1.0.0/go-1.0.0.tar.gz",
-  "sha256": "4bb399e912ca45f10013128b181f63788d25587406b9fbf46024f9bf82c686bb",
+  "sha256": "f9ea296a77aeb30033cf8a8bb0d86875e410e4005afad9b5f862a845bbebda5c",
   "kind": "language",
   "language": {
     "name": "go",

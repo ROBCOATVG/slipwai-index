@@ -5,7 +5,7 @@
       {
         "version": "1.0.0",
         "file": "https://github.com/ROBCOATVG/slipwai-language-go/releases/download/v1.0.0/go-1.0.0.tar.gz",
-        "sha256": "4bb399e912ca45f10013128b181f63788d25587406b9fbf46024f9bf82c686bb",
+        "sha256": "f9ea296a77aeb30033cf8a8bb0d86875e410e4005afad9b5f862a845bbebda5c",
         "kind": "language",
         "language": {
           "name": "go",
@@ -88,7 +88,7 @@
       {
         "version": "1.0.0",
         "file": "https://github.com/ROBCOATVG/slipwai-language-java/releases/download/v1.0.0/java-1.0.0.tar.gz",
-        "sha256": "c64a37814978ac5d18958c75d062a45a976c6d902b2f4d07e8da1bd8a55ef46c",
+        "sha256": "acabfb6bbb83989c49d0dd8a005b35208832f8be71a7e51336afb2ce6279ed89",
         "kind": "language",
         "language": {
           "name": "java",
@@ -105,7 +105,7 @@
       {
         "version": "1.0.0",
         "file": "https://github.com/ROBCOATVG/slipwai-language-java-quarkus/releases/download/v1.0.0/java-quarkus-1.0.0.tar.gz",
-        "sha256": "b75fe0b00c9eac3c7fffc4bfd4d2d030a2717766db6f708aab639fd8ec774a9b",
+        "sha256": "81072789e3970b0ec1299723ef6e76d32ae9a04908c64ab59e9dbdda1e48f138",
         "kind": "language",
         "language": {
           "name": "java-quarkus",
@@ -186,7 +186,7 @@
       {
         "version": "1.0.0",
         "file": "https://github.com/ROBCOATVG/slipwai-language-java-spring/releases/download/v1.0.0/java-spring-1.0.0.tar.gz",
-        "sha256": "f43745beb3fdee4b1fcfe5af854381762d49034f594ab3b9df0bea901ec5a988",
+        "sha256": "6bbedf9cb8703236cb16cc814821e281b74c75515007b5f186e768fcc42fed30",
         "kind": "language",
         "language": {
           "name": "java-spring",
@@ -267,7 +267,7 @@
       {
         "version": "1.0.0",
         "file": "https://github.com/ROBCOATVG/slipwai-language-python/releases/download/v1.0.0/python-1.0.0.tar.gz",
-        "sha256": "fb7277fd4f01012cd81d541f21e67806e989d5e834267485c075825c9937a8b3",
+        "sha256": "af9b89b23acc23851d7f05256f6357b3b2555ff571ca922cc73cf0179813c160",
         "kind": "language",
         "language": {
           "name": "python",
@@ -350,7 +350,7 @@
       {
         "version": "1.0.0",
         "file": "https://github.com/ROBCOATVG/slipwai-language-typescript/releases/download/v1.0.0/typescript-1.0.0.tar.gz",
-        "sha256": "447c3731ad2a7a290751c191b04bc81307051d6da3d52458e0cd11a0aae43f8a",
+        "sha256": "7ce71458fe6ba6eaf2f2868641f4aeda3c581ada0e8e55d5e3dd77f392c23f62",
         "kind": "language",
         "language": {
           "name": "typescript",

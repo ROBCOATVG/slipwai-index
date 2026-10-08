@@ -2,7 +2,7 @@
   "name": "java-quarkus",
   "version": "1.0.0",
   "file": "https://github.com/ROBCOATVG/slipwai-language-java-quarkus/releases/download/v1.0.0/java-quarkus-1.0.0.tar.gz",
-  "sha256": "b75fe0b00c9eac3c7fffc4bfd4d2d030a2717766db6f708aab639fd8ec774a9b",
+  "sha256": "81072789e3970b0ec1299723ef6e76d32ae9a04908c64ab59e9dbdda1e48f138",
   "kind": "language",
   "language": {
     "name": "java-quarkus",
