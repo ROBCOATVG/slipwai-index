@@ -13,7 +13,7 @@ git switch -c publish-<name>-<version> && git add -A && git commit && git push
 Then open a pull request. CI runs `slipwai channel check`, which asks the questions a reviewer cannot
 answer by reading:
 
-- the release file the entry names is here, and its sha256 is the one the entry publishes;
+- the release file the entry names is fetched and its sha256 is the one the entry publishes;
 - the entry is one the client would actually read, manifest and all;
 - the index is what `entries/` renders to, because it is generated and never edited;
 - the name is not already another publisher's.
@@ -22,6 +22,8 @@ answer by reading:
 is an install silently fetching a different person's code under a name a project already depends on.
 
 **A release is immutable.** Changing the file under a version somebody has installed makes a digest they
-checked into a lie. Release a new version instead; `register` refuses the other thing.
+checked into a lie. Release a new version instead; `register` refuses the other thing — and if you replace
+the asset your tag hosts, every install of that version starts failing, which is a thing you have done to
+yourself rather than to anybody who trusted you.
 
 Your package's own CI should call the keel's reusable workflow, which `slipwai package new` writes for you.

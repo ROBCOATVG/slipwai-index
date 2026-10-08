@@ -1,7 +1,7 @@
 {
   "name": "python",
   "version": "1.0.0",
-  "file": "python-1.0.0.tar.gz",
+  "file": "https://github.com/ROBCOATVG/slipwai-language-python/releases/download/v1.0.0/python-1.0.0.tar.gz",
   "sha256": "fb7277fd4f01012cd81d541f21e67806e989d5e834267485c075825c9937a8b3",
   "kind": "language",
   "language": {

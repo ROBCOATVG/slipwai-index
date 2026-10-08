@@ -21,7 +21,11 @@ name an earlier channel lists is that channel's.
 | --- | --- |
 | `entries/<name>-<version>.json` | One file per release. The only thing a contribution adds |
 | `slipwai-languages/index.json` | Generated from `entries/`. Never edited |
-| `slipwai-languages/*.tar.gz` | The release files themselves |
+
+A release file lives on the tag that built it, not here: git keeps every version of every file for ever,
+and a channel holding its own tarballs grows without bound. An entry names the URL and the digest, and the
+digest is what makes somebody else's URL safe to list — a publisher who replaces the file afterwards has
+broken their own package, because the client refuses bytes that are not the bytes the index named.
 
 ## Contributing
 

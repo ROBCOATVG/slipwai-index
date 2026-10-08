@@ -35,8 +35,12 @@ jobs:
           set -eu
           python -m pip install --disable-pip-version-check "${{ vars.SLIPWAI_KEEL || 'slipwai' }}"
           slipwai --version
+      # `--fetch` because this is where a pull request from somebody nobody knows is decided: every file
+      # a publisher hosts themselves is downloaded and held to the digest their entry publishes. Without
+      # it the check is a read of the JSON, which proves the entry is well formed and nothing about the
+      # bytes it names.
       - name: Check the channel
-        run: slipwai channel check .
+        run: slipwai channel check . --fetch
 
   publish:
     needs: check

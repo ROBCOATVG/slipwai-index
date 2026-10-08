@@ -1,7 +1,7 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "file": "typescript-1.0.0.tar.gz",
+  "file": "https://github.com/ROBCOATVG/slipwai-language-typescript/releases/download/v1.0.0/typescript-1.0.0.tar.gz",
   "sha256": "447c3731ad2a7a290751c191b04bc81307051d6da3d52458e0cd11a0aae43f8a",
   "kind": "language",
   "language": {

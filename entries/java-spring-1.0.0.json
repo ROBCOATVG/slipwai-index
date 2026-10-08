@@ -1,7 +1,7 @@
 {
   "name": "java-spring",
   "version": "1.0.0",
-  "file": "java-spring-1.0.0.tar.gz",
+  "file": "https://github.com/ROBCOATVG/slipwai-language-java-spring/releases/download/v1.0.0/java-spring-1.0.0.tar.gz",
   "sha256": "f43745beb3fdee4b1fcfe5af854381762d49034f594ab3b9df0bea901ec5a988",
   "kind": "language",
   "language": {
