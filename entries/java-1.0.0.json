@@ -1,0 +1,16 @@
+{
+  "name": "java",
+  "version": "1.0.0",
+  "file": "java-1.0.0.tar.gz",
+  "sha256": "c64a37814978ac5d18958c75d062a45a976c6d902b2f4d07e8da1bd8a55ef46c",
+  "kind": "language",
+  "language": {
+    "name": "java",
+    "core": ">=9.0,<10",
+    "order": 40,
+    "family": "java",
+    "backends": {},
+    "default_framework": "quarkus"
+  },
+  "publisher": "ROBCOATVG"
+}
