@@ -23,7 +23,18 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-      - run: python -m pip install --disable-pip-version-check slipwai
+      # Which keel checks this channel. `slipwai` from PyPI is the answer once version 2 is published
+      # there; until then it is not, and a channel created today would install a keel with no `channel`
+      # verb in it and fail on the first push with a usage error. So it is a repository variable:
+      #
+      #   gh variable set SLIPWAI_KEEL -R <owner>/<repo>       #     --body 'git+https://github.com/ROBCOATVG/slipwai@main'
+      #
+      # Unset, it installs `slipwai`, which is what every channel should end up doing.
+      - name: Install the keel that checks this channel
+        run: |
+          set -eu
+          python -m pip install --disable-pip-version-check "${{ vars.SLIPWAI_KEEL || 'slipwai' }}"
+          slipwai --version
       - name: Check the channel
         run: slipwai channel check .
 

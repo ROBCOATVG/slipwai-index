@@ -26,3 +26,16 @@ name an earlier channel lists is that channel's.
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). It is four commands.
+
+## Which keel checks this
+
+CI installs `slipwai` from PyPI and runs `slipwai channel check .` — the keel's own code, not this
+repository's, because a channel that checks itself is only as good as that channel.
+
+To check against a keel that is not on PyPI yet, set a repository variable:
+
+```sh
+gh variable set SLIPWAI_KEEL -R <owner>/<repo> --body 'git+https://github.com/ROBCOATVG/slipwai@main'
+```
+
+Unset it once the version you need is published.
