@@ -39,7 +39,7 @@ a{color:var(--teal)}
   <div class="top">
     <div>
       <h1>The slipwai chandlery</h1>
-      <div class="sub">A slipwai chandlery — 6 package(s). Point slipwai at it and install one.</div>
+      <div class="sub">A slipwai chandlery — 8 package(s). Point slipwai at it and install one.</div>
     </div>
     <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" role="img" aria-label="slipwai">
   <title>slipwai</title>
@@ -80,6 +80,22 @@ slipwai generate myapp --backend &lt;that language&gt;</pre>
     <table>
       <tr><th>Package</th><th>Kind</th><th>Version</th><th>Publisher</th><th>What it is</th>
           <th>Install it</th></tr>
+      <tr>
+        <td><b>aws</b></td>
+        <td><span class="kind">target</span></td>
+        <td class="mono">1.0.0</td>
+        <td>ROBCOATVG</td>
+        <td>Amazon Web Services: ECS on Fargate behind a load balancer, RDS Postgres, Cognito, and a site in S3 behind CloudFront, provisioned by OpenTofu and deployed by the trunk pipeline.</td>
+        <td class="mono cmd">—</td>
+      </tr>
+      <tr>
+        <td><b>azure</b></td>
+        <td><span class="kind">target</span></td>
+        <td class="mono">1.0.0</td>
+        <td>ROBCOATVG</td>
+        <td>Microsoft Azure: Container Apps behind the environment&#x27;s own ingress, PostgreSQL Flexible Server, Entra ID, and a static web app, provisioned by OpenTofu and deployed by the trunk pipeline.</td>
+        <td class="mono cmd">—</td>
+      </tr>
       <tr>
         <td><b>go</b></td>
         <td><span class="kind">language</span></td>
