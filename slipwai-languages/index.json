@@ -204,6 +204,43 @@
         "description": "Microsoft Azure: Container Apps behind the environment's own ingress, PostgreSQL Flexible Server, Entra ID, and a static web app, provisioned by OpenTofu and deployed by the trunk pipeline."
       }
     ],
+    "codegraph": [
+      {
+        "version": "1.0.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-extension-codegraph/releases/download/v1.0.0/codegraph-1.0.0.tar.gz",
+        "sha256": "c6acbf038e863c86dcc8b61c10fb36af56ea70ff59d6f5e075c3186c5558cfea",
+        "kind": "extension",
+        "extension": {
+          "key": "codegraph",
+          "name": "CodeGraph",
+          "description": "Indexes the codebase into a local knowledge graph your coding agent can query over MCP, so it can trace callers, dependencies, and the blast radius of a change across files.",
+          "kind": "extension",
+          "core": ">=9.0,<10",
+          "publisher": "ROBCOATVG",
+          "tags": [
+            "dev-tooling"
+          ],
+          "ignore": ".codegraph/\n",
+          "hooks": {
+            "init": "init.py",
+            "after-stage": {
+              "run": "hooks/sync.py",
+              "stages": [
+                "implement",
+                "converge"
+              ],
+              "budget": "30s"
+            },
+            "check": "hooks/check.py"
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "description": "Indexes the codebase into a local knowledge graph your coding agent can query over MCP, so it can trace callers, dependencies, and the blast radius of a change across files.",
+        "tags": [
+          "dev-tooling"
+        ]
+      }
+    ],
     "go": [
       {
         "version": "1.0.0",
@@ -630,6 +667,64 @@
           }
         },
         "publisher": "ROBCOATVG"
+      }
+    ],
+    "uipro": [
+      {
+        "version": "1.0.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-extension-uipro/releases/download/v1.0.0/uipro-1.0.0.tar.gz",
+        "sha256": "b1753e82deb1f0b883102a62284fece8c8b58feef318971cbe5ff20f6a7996da",
+        "kind": "extension",
+        "extension": {
+          "key": "uipro",
+          "name": "UI/UX Pro Max",
+          "description": "Installs the ui-ux-pro-max skill into skills/: an offline, searchable design-system generator (styles, palettes, type pairings, chart types and UX rules by product type) a slice consults before deciding what its screen looks like. Needs a browser app.",
+          "kind": "extension",
+          "core": ">=9.0,<10",
+          "publisher": "ROBCOATVG",
+          "tags": [
+            "dev-tooling"
+          ],
+          "ignore": "skills/ui-ux-pro-max/\n",
+          "hooks": {
+            "init": "init.py",
+            "check": "hooks/check.py"
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "description": "Installs the ui-ux-pro-max skill into skills/: an offline, searchable design-system generator (styles, palettes, type pairings, chart types and UX rules by product type) a slice consults before deciding what its screen looks like. Needs a browser app.",
+        "tags": [
+          "dev-tooling"
+        ]
+      }
+    ],
+    "ux-gates": [
+      {
+        "version": "1.0.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-extension-ux-gates/releases/download/v1.0.0/ux-gates-1.0.0.tar.gz",
+        "sha256": "1c41c4394cd52a561cbb1a1c2af58d9621f886660ad6d76187cea96a9bb71ce8",
+        "kind": "extension",
+        "extension": {
+          "key": "ux-gates",
+          "name": "UX gates",
+          "description": "Installs the ux-ui-agent-skills kit under tools/ and adds its objective gates to make verify: no literal colour, size or duration outside the design tokens, and real-render contrast, focus, target-size, responsive and axe checks over screen previews where a browser is present. Needs a browser app.",
+          "kind": "extension",
+          "core": ">=9.0,<10",
+          "publisher": "ROBCOATVG",
+          "tags": [
+            "dev-tooling"
+          ],
+          "ignore": "tools/ux-gates/\n",
+          "hooks": {
+            "init": "init.py",
+            "check": "hooks/check.py"
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "description": "Installs the ux-ui-agent-skills kit under tools/ and adds its objective gates to make verify: no literal colour, size or duration outside the design tokens, and real-render contrast, focus, target-size, responsive and axe checks over screen previews where a browser is present. Needs a browser app.",
+        "tags": [
+          "dev-tooling"
+        ]
       }
     ]
   }
