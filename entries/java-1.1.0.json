@@ -1,0 +1,16 @@
+{
+  "name": "java",
+  "version": "1.1.0",
+  "file": "https://github.com/ROBCOATVG/slipwai-language-java/releases/download/v1.1.0/java-1.1.0.tar.gz",
+  "sha256": "3e56106834671785e470c7f08b8664a42b92de77cce2a29960aeb9def954ef12",
+  "kind": "language",
+  "language": {
+    "name": "java",
+    "core": ">=9.0,<10",
+    "order": 40,
+    "family": "java",
+    "backends": {},
+    "default_framework": "quarkus"
+  },
+  "publisher": "ROBCOATVG"
+}

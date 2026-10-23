@@ -1,0 +1,86 @@
+{
+  "name": "python",
+  "version": "1.1.0",
+  "file": "https://github.com/ROBCOATVG/slipwai-language-python/releases/download/v1.1.0/python-1.1.0.tar.gz",
+  "sha256": "bff96160319855b9d87864546a9a18f34bc0cd1f1cd6c66a66d80370ffd7bf90",
+  "kind": "language",
+  "language": {
+    "name": "python",
+    "core": ">=9.0,<10",
+    "order": 20,
+    "family": "python",
+    "backends": {
+      "python": {
+        "label": "Python — pip, Ruff, pytest",
+        "targets": [
+          "none",
+          "existing",
+          "aws",
+          "azure"
+        ],
+        "options": {
+          "http": [
+            "none",
+            "fastapi"
+          ],
+          "auth": [
+            "none",
+            "keycloak",
+            "cognito",
+            "entra",
+            "auth0"
+          ],
+          "users": [
+            "none",
+            "keycloak",
+            "cognito",
+            "auth0"
+          ],
+          "persistence": [
+            "memory",
+            "sqlite",
+            "postgres"
+          ],
+          "write-model": [
+            "events",
+            "state"
+          ]
+        },
+        "defaults": {
+          "http": "fastapi"
+        }
+      }
+    },
+    "axes": {
+      "http": {
+        "fastapi": {
+          "label": "FastAPI — JSON API on ASGI, schema-parsed at the edge",
+          "capabilities": [
+            "http-fastapi"
+          ],
+          "features": [
+            "fastapi"
+          ],
+          "containers": [],
+          "migrations": false,
+          "integration-suite": false,
+          "targets": [
+            "none",
+            "existing",
+            "aws",
+            "azure"
+          ],
+          "app-in-compose": true,
+          "repository-owned": [
+            "packages/api-client"
+          ],
+          "web-app-owned": [
+            "src/routes",
+            "tests/routes"
+          ]
+        }
+      }
+    }
+  },
+  "publisher": "ROBCOATVG"
+}
