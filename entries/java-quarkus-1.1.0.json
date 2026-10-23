@@ -1,0 +1,84 @@
+{
+  "name": "java-quarkus",
+  "version": "1.1.0",
+  "file": "https://github.com/ROBCOATVG/slipwai-language-java-quarkus/releases/download/v1.1.0/java-quarkus-1.1.0.tar.gz",
+  "sha256": "52b3a2b14355a076b37a5a01152f468a3dba1754e7dd84054a527eee1fd6f6bb",
+  "kind": "language",
+  "language": {
+    "name": "java-quarkus",
+    "core": ">=9.0,<10",
+    "order": 40,
+    "family": "java",
+    "requires": {
+      "java": ">=1.1,<2"
+    },
+    "backends": {
+      "java-quarkus": {
+        "framework": "quarkus",
+        "label": "Java — Quarkus owns startup (Agroal, Flyway, SmallRye Health, OIDC); Maven, Checkstyle/PMD/SpotBugs, JUnit 5",
+        "targets": [
+          "none",
+          "existing",
+          "aws",
+          "azure"
+        ],
+        "options": {
+          "http": [
+            "none",
+            "quarkus-rest"
+          ],
+          "auth": [
+            "none",
+            "keycloak",
+            "cognito",
+            "entra",
+            "auth0"
+          ],
+          "users": [
+            "none",
+            "keycloak",
+            "cognito",
+            "auth0"
+          ],
+          "persistence": [
+            "memory",
+            "sqlite",
+            "postgres"
+          ],
+          "write-model": [
+            "events",
+            "state"
+          ]
+        },
+        "defaults": {
+          "http": "quarkus-rest"
+        }
+      }
+    },
+    "axes": {
+      "http": {
+        "quarkus-rest": {
+          "label": "Quarkus REST — JSON API on the framework's own HTTP layer, with SmallRye Health serving the readiness probe",
+          "capabilities": [
+            "http-quarkus-rest"
+          ],
+          "features": [
+            "quarkus-rest"
+          ],
+          "containers": [],
+          "migrations": false,
+          "integration-suite": false,
+          "targets": [
+            "none",
+            "existing",
+            "aws",
+            "azure"
+          ],
+          "app-in-compose": true,
+          "note": "Dropping it takes SmallRye Health with it: the readiness probe is the framework's."
+        }
+      }
+    }
+  },
+  "publisher": "ROBCOATVG"
+}
