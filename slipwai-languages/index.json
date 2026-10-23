@@ -1103,6 +1103,89 @@
           }
         },
         "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.2.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-java-quarkus/releases/download/v1.2.0/java-quarkus-1.2.0.tar.gz",
+        "sha256": "c3b5ef2efd191ab0e6248d4e5ca9598c2feb3b7c2e53cafb9f2468e82e553307",
+        "kind": "language",
+        "language": {
+          "name": "java-quarkus",
+          "core": ">=9.0,<10",
+          "order": 40,
+          "family": "java",
+          "requires": {
+            "java": ">=1.2,<2"
+          },
+          "backends": {
+            "java-quarkus": {
+              "framework": "quarkus",
+              "label": "Java — Quarkus owns startup (Agroal, Flyway, SmallRye Health, OIDC); Maven, Checkstyle/PMD/SpotBugs, JUnit 5",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "quarkus-rest"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "quarkus-rest"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "quarkus-rest": {
+                "label": "Quarkus REST — JSON API on the framework's own HTTP layer, with SmallRye Health serving the readiness probe",
+                "capabilities": [
+                  "http-quarkus-rest"
+                ],
+                "features": [
+                  "quarkus-rest"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "note": "Dropping it takes SmallRye Health with it: the readiness probe is the framework's."
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG"
       }
     ],
     "java-spring": [
@@ -1197,6 +1280,89 @@
           "family": "java",
           "requires": {
             "java": ">=1.1,<2"
+          },
+          "backends": {
+            "java-spring": {
+              "framework": "spring-boot",
+              "label": "Java — Spring Boot owns startup (HikariCP, Flyway, Actuator, Spring Security); Maven, Checkstyle/PMD/SpotBugs, JUnit 5",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "spring-web"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "spring-web"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "spring-web": {
+                "label": "Spring MVC — JSON API on Tomcat over virtual threads, with Actuator serving the readiness probe",
+                "capabilities": [
+                  "http-spring-web"
+                ],
+                "features": [
+                  "spring-web"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "note": "Dropping it takes Actuator with it: the readiness probe is the framework's."
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.2.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-java-spring/releases/download/v1.2.0/java-spring-1.2.0.tar.gz",
+        "sha256": "9cabe77e569808d5935e072c9d85a5429e84f7c516b408f049ba37d13bc311c6",
+        "kind": "language",
+        "language": {
+          "name": "java-spring",
+          "core": ">=9.0,<10",
+          "order": 40,
+          "family": "java",
+          "requires": {
+            "java": ">=1.2,<2"
           },
           "backends": {
             "java-spring": {
