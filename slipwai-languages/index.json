@@ -521,6 +521,91 @@
           }
         },
         "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.1.1",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-go/releases/download/v1.1.1/go-1.1.1.tar.gz",
+        "sha256": "ab0213e90a885d43f5264c75d68970e5f48b1e954334dc93cd1b38b20d610fe2",
+        "kind": "language",
+        "language": {
+          "name": "go",
+          "core": ">=9.0,<10",
+          "order": 30,
+          "family": "go",
+          "backends": {
+            "go": {
+              "label": "Go — modules, gofmt, `go vet`, `go test`",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "net-http"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "net-http"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "net-http": {
+                "label": "net/http — standard-library JSON API, no framework dependency",
+                "capabilities": [
+                  "http-net-http"
+                ],
+                "features": [
+                  "net-http"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "repository-owned": [
+                  "packages/api-client"
+                ],
+                "web-app-owned": [
+                  "src/routes",
+                  "tests/routes"
+                ]
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG"
       }
     ],
     "java": [
@@ -634,6 +719,89 @@
           }
         },
         "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.1.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-java-quarkus/releases/download/v1.1.0/java-quarkus-1.1.0.tar.gz",
+        "sha256": "52b3a2b14355a076b37a5a01152f468a3dba1754e7dd84054a527eee1fd6f6bb",
+        "kind": "language",
+        "language": {
+          "name": "java-quarkus",
+          "core": ">=9.0,<10",
+          "order": 40,
+          "family": "java",
+          "requires": {
+            "java": ">=1.1,<2"
+          },
+          "backends": {
+            "java-quarkus": {
+              "framework": "quarkus",
+              "label": "Java — Quarkus owns startup (Agroal, Flyway, SmallRye Health, OIDC); Maven, Checkstyle/PMD/SpotBugs, JUnit 5",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "quarkus-rest"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "quarkus-rest"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "quarkus-rest": {
+                "label": "Quarkus REST — JSON API on the framework's own HTTP layer, with SmallRye Health serving the readiness probe",
+                "capabilities": [
+                  "http-quarkus-rest"
+                ],
+                "features": [
+                  "quarkus-rest"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "note": "Dropping it takes SmallRye Health with it: the readiness probe is the framework's."
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG"
       }
     ],
     "java-spring": [
@@ -682,6 +850,89 @@
                   "keycloak",
                   "cognito",
                   "auth0"
+                ]
+              },
+              "defaults": {
+                "http": "spring-web"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "spring-web": {
+                "label": "Spring MVC — JSON API on Tomcat over virtual threads, with Actuator serving the readiness probe",
+                "capabilities": [
+                  "http-spring-web"
+                ],
+                "features": [
+                  "spring-web"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "note": "Dropping it takes Actuator with it: the readiness probe is the framework's."
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.1.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-java-spring/releases/download/v1.1.0/java-spring-1.1.0.tar.gz",
+        "sha256": "45393d121620625b196dfaaf5b1d416d04bad15b2593867d4da94aebaf4f2556",
+        "kind": "language",
+        "language": {
+          "name": "java-spring",
+          "core": ">=9.0,<10",
+          "order": 40,
+          "family": "java",
+          "requires": {
+            "java": ">=1.1,<2"
+          },
+          "backends": {
+            "java-spring": {
+              "framework": "spring-boot",
+              "label": "Java — Spring Boot owns startup (HikariCP, Flyway, Actuator, Spring Security); Maven, Checkstyle/PMD/SpotBugs, JUnit 5",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "spring-web"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
                 ]
               },
               "defaults": {
@@ -1056,6 +1307,139 @@
         "version": "1.2.0",
         "file": "https://github.com/ROBCOATVG/slipwai-language-typescript/releases/download/v1.2.0/typescript-1.2.0.tar.gz",
         "sha256": "2f2516c83face3698f2864212ab639d7aa7dfbd77e1bd1372b2eccb16f868da8",
+        "kind": "language",
+        "language": {
+          "name": "typescript",
+          "core": ">=9.0,<10",
+          "order": 10,
+          "family": "typescript",
+          "backends": {
+            "typescript": {
+              "label": "TypeScript — Node and npm workspaces, ESLint, `tsc`, Vitest",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "fastify"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "fastify"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "fastify": {
+                "label": "Fastify — JSON API, schema-parsed at the edge",
+                "capabilities": [
+                  "http-fastify"
+                ],
+                "features": [
+                  "fastify"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "repository-owned": [
+                  "packages/api-client"
+                ],
+                "web-app-owned": [
+                  "src/routes",
+                  "tests/routes"
+                ]
+              }
+            }
+          },
+          "frontends": {
+            "react-vite": {
+              "label": "React and Vite — a TypeScript browser app, Biome, Vitest and Testing Library",
+              "stack": "TypeScript/React/Vite",
+              "gate": "Biome, TypeScript and React component tests",
+              "capabilities": [
+                "frontend",
+                "typescript",
+                "react",
+                "vite"
+              ],
+              "marked": [
+                "vite.config.ts",
+                "src/main.tsx",
+                "src/App.tsx",
+                "tests/App.test.tsx"
+              ],
+              "features": {
+                "users-keycloak": {
+                  "files": "features/users-keycloak",
+                  "owned": [
+                    "src/auth",
+                    "tests/auth"
+                  ],
+                  "dependencies": {
+                    "oidc-client-ts": "3.5.0",
+                    "react-oidc-context": "3.3.1"
+                  },
+                  "where": "`src/auth/users.tsx`, react-oidc-context over oidc-client-ts"
+                }
+              },
+              "design": {
+                "tokens": "src/styles/tokens.css",
+                "base": "src/styles/base.css",
+                "shell": "src/App.tsx",
+                "entry": "src/main.tsx",
+                "imports": [
+                  "import './styles/tokens.css';\n",
+                  "import './styles/base.css';\n"
+                ],
+                "route": "src/routes/Home.tsx"
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "answers": [
+          "npm_workspace",
+          "browser_apps"
+        ]
+      },
+      {
+        "version": "1.2.1",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-typescript/releases/download/v1.2.1/typescript-1.2.1.tar.gz",
+        "sha256": "cc9059846db2aa00fa1d527623bec4f4fd2207365bd102270c27f9c4d7653e2e",
         "kind": "language",
         "language": {
           "name": "typescript",

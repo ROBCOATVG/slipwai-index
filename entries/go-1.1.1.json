@@ -1,0 +1,86 @@
+{
+  "name": "go",
+  "version": "1.1.1",
+  "file": "https://github.com/ROBCOATVG/slipwai-language-go/releases/download/v1.1.1/go-1.1.1.tar.gz",
+  "sha256": "ab0213e90a885d43f5264c75d68970e5f48b1e954334dc93cd1b38b20d610fe2",
+  "kind": "language",
+  "language": {
+    "name": "go",
+    "core": ">=9.0,<10",
+    "order": 30,
+    "family": "go",
+    "backends": {
+      "go": {
+        "label": "Go — modules, gofmt, `go vet`, `go test`",
+        "targets": [
+          "none",
+          "existing",
+          "aws",
+          "azure"
+        ],
+        "options": {
+          "http": [
+            "none",
+            "net-http"
+          ],
+          "auth": [
+            "none",
+            "keycloak",
+            "cognito",
+            "entra",
+            "auth0"
+          ],
+          "users": [
+            "none",
+            "keycloak",
+            "cognito",
+            "auth0"
+          ],
+          "persistence": [
+            "memory",
+            "sqlite",
+            "postgres"
+          ],
+          "write-model": [
+            "events",
+            "state"
+          ]
+        },
+        "defaults": {
+          "http": "net-http"
+        }
+      }
+    },
+    "axes": {
+      "http": {
+        "net-http": {
+          "label": "net/http — standard-library JSON API, no framework dependency",
+          "capabilities": [
+            "http-net-http"
+          ],
+          "features": [
+            "net-http"
+          ],
+          "containers": [],
+          "migrations": false,
+          "integration-suite": false,
+          "targets": [
+            "none",
+            "existing",
+            "aws",
+            "azure"
+          ],
+          "app-in-compose": true,
+          "repository-owned": [
+            "packages/api-client"
+          ],
+          "web-app-owned": [
+            "src/routes",
+            "tests/routes"
+          ]
+        }
+      }
+    }
+  },
+  "publisher": "ROBCOATVG"
+}
