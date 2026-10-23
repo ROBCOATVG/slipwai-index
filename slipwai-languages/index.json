@@ -538,6 +538,21 @@
           "default_framework": "quarkus"
         },
         "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.1.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-java/releases/download/v1.1.0/java-1.1.0.tar.gz",
+        "sha256": "3e56106834671785e470c7f08b8664a42b92de77cce2a29960aeb9def954ef12",
+        "kind": "language",
+        "language": {
+          "name": "java",
+          "core": ">=9.0,<10",
+          "order": 40,
+          "family": "java",
+          "backends": {},
+          "default_framework": "quarkus"
+        },
+        "publisher": "ROBCOATVG"
       }
     ],
     "java-quarkus": [
@@ -783,6 +798,91 @@
           }
         },
         "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.1.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-python/releases/download/v1.1.0/python-1.1.0.tar.gz",
+        "sha256": "bff96160319855b9d87864546a9a18f34bc0cd1f1cd6c66a66d80370ffd7bf90",
+        "kind": "language",
+        "language": {
+          "name": "python",
+          "core": ">=9.0,<10",
+          "order": 20,
+          "family": "python",
+          "backends": {
+            "python": {
+              "label": "Python — pip, Ruff, pytest",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "fastapi"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "fastapi"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "fastapi": {
+                "label": "FastAPI — JSON API on ASGI, schema-parsed at the edge",
+                "capabilities": [
+                  "http-fastapi"
+                ],
+                "features": [
+                  "fastapi"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "repository-owned": [
+                  "packages/api-client"
+                ],
+                "web-app-owned": [
+                  "src/routes",
+                  "tests/routes"
+                ]
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG"
       }
     ],
     "typescript": [
@@ -866,6 +966,224 @@
           }
         },
         "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.1.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-typescript/releases/download/v1.1.0/typescript-1.1.0.tar.gz",
+        "sha256": "67d3afb7b6c09f61db4a2ad64b0c2d196c85ba623219e45a0134353f1a157103",
+        "kind": "language",
+        "language": {
+          "name": "typescript",
+          "core": ">=9.0,<10",
+          "order": 10,
+          "family": "typescript",
+          "backends": {
+            "typescript": {
+              "label": "TypeScript — Node and npm workspaces, ESLint, `tsc`, Vitest",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "fastify"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "fastify"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "fastify": {
+                "label": "Fastify — JSON API, schema-parsed at the edge",
+                "capabilities": [
+                  "http-fastify"
+                ],
+                "features": [
+                  "fastify"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "repository-owned": [
+                  "packages/api-client"
+                ],
+                "web-app-owned": [
+                  "src/routes",
+                  "tests/routes"
+                ]
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG"
+      },
+      {
+        "version": "1.2.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-language-typescript/releases/download/v1.2.0/typescript-1.2.0.tar.gz",
+        "sha256": "2f2516c83face3698f2864212ab639d7aa7dfbd77e1bd1372b2eccb16f868da8",
+        "kind": "language",
+        "language": {
+          "name": "typescript",
+          "core": ">=9.0,<10",
+          "order": 10,
+          "family": "typescript",
+          "backends": {
+            "typescript": {
+              "label": "TypeScript — Node and npm workspaces, ESLint, `tsc`, Vitest",
+              "targets": [
+                "none",
+                "existing",
+                "aws",
+                "azure"
+              ],
+              "options": {
+                "http": [
+                  "none",
+                  "fastify"
+                ],
+                "auth": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "entra",
+                  "auth0"
+                ],
+                "users": [
+                  "none",
+                  "keycloak",
+                  "cognito",
+                  "auth0"
+                ],
+                "persistence": [
+                  "memory",
+                  "sqlite",
+                  "postgres"
+                ],
+                "write-model": [
+                  "events",
+                  "state"
+                ]
+              },
+              "defaults": {
+                "http": "fastify"
+              }
+            }
+          },
+          "axes": {
+            "http": {
+              "fastify": {
+                "label": "Fastify — JSON API, schema-parsed at the edge",
+                "capabilities": [
+                  "http-fastify"
+                ],
+                "features": [
+                  "fastify"
+                ],
+                "containers": [],
+                "migrations": false,
+                "integration-suite": false,
+                "targets": [
+                  "none",
+                  "existing",
+                  "aws",
+                  "azure"
+                ],
+                "app-in-compose": true,
+                "repository-owned": [
+                  "packages/api-client"
+                ],
+                "web-app-owned": [
+                  "src/routes",
+                  "tests/routes"
+                ]
+              }
+            }
+          },
+          "frontends": {
+            "react-vite": {
+              "label": "React and Vite — a TypeScript browser app, Biome, Vitest and Testing Library",
+              "stack": "TypeScript/React/Vite",
+              "gate": "Biome, TypeScript and React component tests",
+              "capabilities": [
+                "frontend",
+                "typescript",
+                "react",
+                "vite"
+              ],
+              "marked": [
+                "vite.config.ts",
+                "src/main.tsx",
+                "src/App.tsx",
+                "tests/App.test.tsx"
+              ],
+              "features": {
+                "users-keycloak": {
+                  "files": "features/users-keycloak",
+                  "owned": [
+                    "src/auth",
+                    "tests/auth"
+                  ],
+                  "dependencies": {
+                    "oidc-client-ts": "3.5.0",
+                    "react-oidc-context": "3.3.1"
+                  },
+                  "where": "`src/auth/users.tsx`, react-oidc-context over oidc-client-ts"
+                }
+              },
+              "design": {
+                "tokens": "src/styles/tokens.css",
+                "base": "src/styles/base.css",
+                "shell": "src/App.tsx",
+                "entry": "src/main.tsx",
+                "imports": [
+                  "import './styles/tokens.css';\n",
+                  "import './styles/base.css';\n"
+                ],
+                "route": "src/routes/Home.tsx"
+              }
+            }
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "answers": [
+          "npm_workspace",
+          "browser_apps"
+        ]
       }
     ],
     "uipro": [
