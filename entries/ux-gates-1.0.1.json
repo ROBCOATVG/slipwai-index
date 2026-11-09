@@ -1,0 +1,28 @@
+{
+  "name": "ux-gates",
+  "version": "1.0.1",
+  "file": "https://github.com/ROBCOATVG/slipwai-extension-ux-gates/releases/download/v1.0.1/ux-gates-1.0.1.tar.gz",
+  "sha256": "fbca3d0d2eba9fa434618e0054aec59f59be5a4ef0b99036d142854248542989",
+  "kind": "extension",
+  "extension": {
+    "key": "ux-gates",
+    "name": "UX gates",
+    "description": "Installs the ux-ui-agent-skills kit under tools/ and adds its objective gates to make verify: no literal colour, size or duration outside the design tokens, and real-render contrast, focus, target-size, responsive and axe checks over screen previews where a browser is present. Needs a browser app.",
+    "kind": "extension",
+    "core": ">=9.0,<10",
+    "publisher": "ROBCOATVG",
+    "tags": [
+      "dev-tooling"
+    ],
+    "ignore": "tools/ux-gates/\n",
+    "hooks": {
+      "init": "init.py",
+      "check": "hooks/check.py"
+    }
+  },
+  "publisher": "ROBCOATVG",
+  "description": "Installs the ux-ui-agent-skills kit under tools/ and adds its objective gates to make verify: no literal colour, size or duration outside the design tokens, and real-render contrast, focus, target-size, responsive and axe checks over screen previews where a browser is present. Needs a browser app.",
+  "tags": [
+    "dev-tooling"
+  ]
+}
