@@ -955,6 +955,47 @@
         "tags": [
           "dev-tooling"
         ]
+      },
+      {
+        "version": "1.1.0",
+        "file": "https://github.com/ROBCOATVG/slipwai-extension-codegraph/releases/download/v1.1.0/codegraph-1.1.0.tar.gz",
+        "sha256": "d8c20423ed90b06fa581c58c5aa6e9ff0150fab19faf7d36fe06631ee9de3a8a",
+        "kind": "extension",
+        "extension": {
+          "key": "codegraph",
+          "name": "CodeGraph",
+          "description": "Indexes the codebase into a local knowledge graph your coding agent can query over MCP, so it can trace callers, dependencies, and the blast radius of a change across files.",
+          "kind": "extension",
+          "core": ">=9.0,<10",
+          "publisher": "ROBCOATVG",
+          "tags": [
+            "dev-tooling"
+          ],
+          "ignore": ".codegraph/\n",
+          "hooks": {
+            "init": "init.py",
+            "project": "hooks/project.py",
+            "after-stage": {
+              "run": "hooks/sync.py",
+              "budget": "30s"
+            },
+            "check": "hooks/check.py"
+          },
+          "guards": {
+            "before-search": {
+              "run": "guards/ask_the_index.py",
+              "budget": "5s",
+              "sees": [
+                "mcp__codegraph__.*"
+              ]
+            }
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "description": "Indexes the codebase into a local knowledge graph your coding agent can query over MCP, so it can trace callers, dependencies, and the blast radius of a change across files.",
+        "tags": [
+          "dev-tooling"
+        ]
       }
     ],
     "go": [
@@ -2380,6 +2421,33 @@
         "tags": [
           "dev-tooling"
         ]
+      },
+      {
+        "version": "1.0.1",
+        "file": "https://github.com/ROBCOATVG/slipwai-extension-uipro/releases/download/v1.0.1/uipro-1.0.1.tar.gz",
+        "sha256": "9f9573f5e40701c94e4e7b2db8114c24d198ccd363bfadb44f561eeb4b524d66",
+        "kind": "extension",
+        "extension": {
+          "key": "uipro",
+          "name": "UI/UX Pro Max",
+          "description": "Installs the ui-ux-pro-max skill into skills/: an offline, searchable design-system generator (styles, palettes, type pairings, chart types and UX rules by product type) a slice consults before deciding what its screen looks like. Needs a browser app.",
+          "kind": "extension",
+          "core": ">=9.0,<10",
+          "publisher": "ROBCOATVG",
+          "tags": [
+            "dev-tooling"
+          ],
+          "ignore": "skills/ui-ux-pro-max/\n",
+          "hooks": {
+            "init": "init.py",
+            "check": "hooks/check.py"
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "description": "Installs the ui-ux-pro-max skill into skills/: an offline, searchable design-system generator (styles, palettes, type pairings, chart types and UX rules by product type) a slice consults before deciding what its screen looks like. Needs a browser app.",
+        "tags": [
+          "dev-tooling"
+        ]
       }
     ],
     "unslop": [
@@ -2387,6 +2455,34 @@
         "version": "1.0.0",
         "file": "https://github.com/ROBCOATVG/slipwai-extension-unslop/releases/download/v1.0.0/unslop-1.0.0.tar.gz",
         "sha256": "b50f5c2e8cdcbf1ecb68d3bffe4d73f27d1b5fb3e583f5dec236772a0d8c752b",
+        "kind": "extension",
+        "extension": {
+          "key": "unslop",
+          "name": "unslop",
+          "description": "Installs Damir Sokolovsky's unslop skill into every harness here: an ordered redline pass that turns AI-looking screens into a designed interface. Needs a browser app.",
+          "kind": "extension",
+          "core": ">=9.0,<10",
+          "publisher": "ROBCOATVG",
+          "tags": [
+            "dev-tooling",
+            "design"
+          ],
+          "ignore": "skills/unslop/\ntools/unslop/\n",
+          "hooks": {
+            "check": "hooks/check.py"
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "description": "Installs Damir Sokolovsky's unslop skill into every harness here: an ordered redline pass that turns AI-looking screens into a designed interface. Needs a browser app.",
+        "tags": [
+          "dev-tooling",
+          "design"
+        ]
+      },
+      {
+        "version": "1.0.1",
+        "file": "https://github.com/ROBCOATVG/slipwai-extension-unslop/releases/download/v1.0.1/unslop-1.0.1.tar.gz",
+        "sha256": "623cb068c2ddb15aae3d166a759540c11ab6dff4dd73ef8d14d14c5dad408783",
         "kind": "extension",
         "extension": {
           "key": "unslop",
@@ -2444,6 +2540,33 @@
         "version": "1.0.1",
         "file": "https://github.com/ROBCOATVG/slipwai-extension-ux-gates/releases/download/v1.0.1/ux-gates-1.0.1.tar.gz",
         "sha256": "fbca3d0d2eba9fa434618e0054aec59f59be5a4ef0b99036d142854248542989",
+        "kind": "extension",
+        "extension": {
+          "key": "ux-gates",
+          "name": "UX gates",
+          "description": "Installs the ux-ui-agent-skills kit under tools/ and adds its objective gates to make verify: no literal colour, size or duration outside the design tokens, and real-render contrast, focus, target-size, responsive and axe checks over screen previews where a browser is present. Needs a browser app.",
+          "kind": "extension",
+          "core": ">=9.0,<10",
+          "publisher": "ROBCOATVG",
+          "tags": [
+            "dev-tooling"
+          ],
+          "ignore": "tools/ux-gates/\n",
+          "hooks": {
+            "init": "init.py",
+            "check": "hooks/check.py"
+          }
+        },
+        "publisher": "ROBCOATVG",
+        "description": "Installs the ux-ui-agent-skills kit under tools/ and adds its objective gates to make verify: no literal colour, size or duration outside the design tokens, and real-render contrast, focus, target-size, responsive and axe checks over screen previews where a browser is present. Needs a browser app.",
+        "tags": [
+          "dev-tooling"
+        ]
+      },
+      {
+        "version": "1.0.2",
+        "file": "https://github.com/ROBCOATVG/slipwai-extension-ux-gates/releases/download/v1.0.2/ux-gates-1.0.2.tar.gz",
+        "sha256": "cef5325f04fb5db93e5d8653ae04c776ebc6a732194974b076d504b349fd63c2",
         "kind": "extension",
         "extension": {
           "key": "ux-gates",

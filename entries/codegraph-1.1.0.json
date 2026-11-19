@@ -1,0 +1,42 @@
+{
+  "name": "codegraph",
+  "version": "1.1.0",
+  "file": "https://github.com/ROBCOATVG/slipwai-extension-codegraph/releases/download/v1.1.0/codegraph-1.1.0.tar.gz",
+  "sha256": "d8c20423ed90b06fa581c58c5aa6e9ff0150fab19faf7d36fe06631ee9de3a8a",
+  "kind": "extension",
+  "extension": {
+    "key": "codegraph",
+    "name": "CodeGraph",
+    "description": "Indexes the codebase into a local knowledge graph your coding agent can query over MCP, so it can trace callers, dependencies, and the blast radius of a change across files.",
+    "kind": "extension",
+    "core": ">=9.0,<10",
+    "publisher": "ROBCOATVG",
+    "tags": [
+      "dev-tooling"
+    ],
+    "ignore": ".codegraph/\n",
+    "hooks": {
+      "init": "init.py",
+      "project": "hooks/project.py",
+      "after-stage": {
+        "run": "hooks/sync.py",
+        "budget": "30s"
+      },
+      "check": "hooks/check.py"
+    },
+    "guards": {
+      "before-search": {
+        "run": "guards/ask_the_index.py",
+        "budget": "5s",
+        "sees": [
+          "mcp__codegraph__.*"
+        ]
+      }
+    }
+  },
+  "publisher": "ROBCOATVG",
+  "description": "Indexes the codebase into a local knowledge graph your coding agent can query over MCP, so it can trace callers, dependencies, and the blast radius of a change across files.",
+  "tags": [
+    "dev-tooling"
+  ]
+}
