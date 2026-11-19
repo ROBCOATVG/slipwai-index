@@ -1,0 +1,28 @@
+{
+  "name": "uipro",
+  "version": "1.0.2",
+  "file": "https://github.com/ROBCOATVG/slipwai-extension-uipro/releases/download/v1.0.2/uipro-1.0.2.tar.gz",
+  "sha256": "d66449c6770042999b51c984bdfa35c9bb9b1b20991b602510623477716b366f",
+  "kind": "extension",
+  "extension": {
+    "key": "uipro",
+    "name": "UI/UX Pro Max",
+    "description": "Installs the ui-ux-pro-max skill into skills/: an offline, searchable design-system generator (styles, palettes, type pairings, chart types and UX rules by product type) a slice consults before deciding what its screen looks like. Needs a browser app.",
+    "kind": "extension",
+    "core": ">=9.0,<10",
+    "publisher": "ROBCOATVG",
+    "tags": [
+      "dev-tooling"
+    ],
+    "ignore": "skills/ui-ux-pro-max/\n",
+    "hooks": {
+      "init": "init.py",
+      "check": "hooks/check.py"
+    }
+  },
+  "publisher": "ROBCOATVG",
+  "description": "Installs the ui-ux-pro-max skill into skills/: an offline, searchable design-system generator (styles, palettes, type pairings, chart types and UX rules by product type) a slice consults before deciding what its screen looks like. Needs a browser app.",
+  "tags": [
+    "dev-tooling"
+  ]
+}
