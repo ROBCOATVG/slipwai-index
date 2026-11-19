@@ -1,0 +1,29 @@
+{
+  "name": "unslop",
+  "version": "1.0.1",
+  "file": "https://github.com/ROBCOATVG/slipwai-extension-unslop/releases/download/v1.0.1/unslop-1.0.1.tar.gz",
+  "sha256": "623cb068c2ddb15aae3d166a759540c11ab6dff4dd73ef8d14d14c5dad408783",
+  "kind": "extension",
+  "extension": {
+    "key": "unslop",
+    "name": "unslop",
+    "description": "Installs Damir Sokolovsky's unslop skill into every harness here: an ordered redline pass that turns AI-looking screens into a designed interface. Needs a browser app.",
+    "kind": "extension",
+    "core": ">=9.0,<10",
+    "publisher": "ROBCOATVG",
+    "tags": [
+      "dev-tooling",
+      "design"
+    ],
+    "ignore": "skills/unslop/\ntools/unslop/\n",
+    "hooks": {
+      "check": "hooks/check.py"
+    }
+  },
+  "publisher": "ROBCOATVG",
+  "description": "Installs Damir Sokolovsky's unslop skill into every harness here: an ordered redline pass that turns AI-looking screens into a designed interface. Needs a browser app.",
+  "tags": [
+    "dev-tooling",
+    "design"
+  ]
+}
